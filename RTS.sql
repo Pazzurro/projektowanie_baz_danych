@@ -14,5 +14,14 @@ SELECT Player_id, Unit_id, Amount FROM players_has_units;
 
 SELECT id, Name, Amount FROM resources WHERE Player_id = 2;
 
+SELECT id, Name, Amount FROM resources WHERE Player_id = 2;
 
+
+SELECT players.name, resources.Name, resources.Amount FROM players JOIN resources ON players.id = resources.Player_id;
+
+SELECT players.name, players_has_units.Amount, units.Name, units.Damage, units.Defense FROM players JOIN players_has_units ON players.id = players_has_units.Player_id JOIN units ON units.id = players_has_units.Unit_id;
+
+SELECT players.name, buildings.name, buildings.health FROM players JOIN players_has_buildings ON players.id = players_has_buildings.Player_id JOIN buildings ON buildings.id = players_has_buildings.Building_id;
+
+SELECT players.name, units.name, players_has_units.Amount FROM players JOIN players_has_units ON players.id = players_has_units.Player_id JOIN units ON Unit_id = players_has_units.Unit_id AND units.Name = "Archer";
 
