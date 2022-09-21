@@ -23,5 +23,5 @@ SELECT players.name, players_has_units.Amount, units.Name, units.Damage, units.D
 
 SELECT players.name, buildings.name, buildings.health FROM players JOIN players_has_buildings ON players.id = players_has_buildings.Player_id JOIN buildings ON buildings.id = players_has_buildings.Building_id;
 
-SELECT players.name, units.name, players_has_units.Amount FROM players JOIN players_has_units ON players.id = players_has_units.Player_id JOIN units ON Unit_id = players_has_units.Unit_id AND units.Name = "Archer";
+SELECT players.name, units.Name, players_has_units.Amount FROM players_has_units JOIN players ON players.id = players_has_units.Player_id JOIN units ON players_has_units.Unit_id = units.id AND units.Name = "Archer";
 
