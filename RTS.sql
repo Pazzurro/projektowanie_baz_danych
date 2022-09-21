@@ -2,7 +2,7 @@ SELECT name, score FROM players;
 
 SELECT name, health FROM buildings;
 
-SELECT FROM maps;
+SELECT * FROM maps;
 
 SELECT Map_id, Player_id FROM maps_has_players WHERE Map_id = 1;
 
